@@ -1,0 +1,28 @@
+//find area and volume of the sphere using OOP's concept
+#include<iostream>
+#include<math.h>
+const double pi=3.142;
+using namespace std;
+class sphere{
+private:
+    float radius,volume,area;
+public:
+    void set_rad(float r){radius=r;}
+    void calcvolume(){
+        volume=4/3*pi*pow(radius,3);
+    }
+    void calcarea(){
+        area=4*pi*pow(radius,2);
+    }
+    void printsphere(){
+        cout<<"\n volume of sphere:"<<volume<<"\n area of sphere:"<<area;
+    }
+};
+int main(){
+    sphere mysphere;
+    mysphere.set_rad(5);
+    mysphere.calcvolume();
+    mysphere.calcarea();
+    mysphere.printsphere();
+    return 0;
+}
